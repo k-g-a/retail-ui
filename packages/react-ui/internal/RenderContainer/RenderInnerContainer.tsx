@@ -38,6 +38,7 @@ export const Portal = ({ container, rt_rootID, children }: PortalProps) => {
   // container exists only in browser
   return (
     <React.Fragment>
+      {/*@ts-ignore*/}
       {container ? ReactDOM.createPortal(children, container) : <SSRPlaceholder />}
       {container ? <noscript {...{ [PORTAL_INLET_ATTR]: rt_rootID }} /> : <SSRPlaceholder />}
     </React.Fragment>

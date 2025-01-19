@@ -61,6 +61,7 @@ class PerformanceMetricsPanel extends React.Component<PerformanceMetricsPanelPro
   public componentDidMount() {
     if (this.state.mounted && this.container) {
       const root = createRoot(this.container);
+      // @ts-ignore
       root.render(this.props.component);
     }
   }
@@ -71,6 +72,7 @@ class PerformanceMetricsPanel extends React.Component<PerformanceMetricsPanelPro
     }
     if (this.state.mounted) {
       const root = createRoot(this.container);
+      // @ts-ignore
       root.render(this.props.component);
     } else {
       const root = createRoot(this.container);

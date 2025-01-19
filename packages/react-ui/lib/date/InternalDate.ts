@@ -27,8 +27,10 @@ const getRestoreYear = (
   today: ReturnType<typeof InternalDateGetter.getTodayComponents>,
 ) => {
   if (prev.year !== null && InternalDateValidator.testParseToNumber(prev.year)) {
+    // @ts-expect-error 13
     if (prev.year > 50 && prev.year < 100) {
       return Number(prev.year) + 1900;
+      // @ts-expect-error 13
     } else if (prev.year > 0 && prev.year < 51) {
       return Number(prev.year) + 2000;
     }

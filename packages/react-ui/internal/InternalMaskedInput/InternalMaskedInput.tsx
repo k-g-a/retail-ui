@@ -118,6 +118,7 @@ export class InternalMaskedInput extends React.PureComponent<InternalMaskedInput
 
     return (
       <span data-tid={MaskedInputDataTids.root} className={styles.container()} x-ms-format-detection="none">
+        {/*@ts-ignore*/}
         <ReactInputMask
           {...inputProps}
           maskChar={null}

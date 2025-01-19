@@ -62,6 +62,7 @@ export const getRootNode = (instance: Nullable<React.ReactInstance>): Nullable<E
     // anyway, it tell us that the convention is not respected,
     // so, we have to fall back to the deprecated findDOMNode, which breaks StrictMode
     // instance can still be a class component or an imperative handle (i.e., anything, except null/undefined/Element)
+    // @ts-ignore
     rootNode = findDOMNode(instance);
   } catch (e) {
     // but findDOMNode doesn`t accept everything that instance can be at this point,
